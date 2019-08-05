@@ -1,24 +1,5 @@
 <div class="col-sm-12 col-sm-12">
-    <div>
-        <div class="col-sm-10 col-sm-10">
-            <mk-tabs>
-                <mk-tabs-header><i class="fa fa-th"></i> Tipos de investimentos</mk-tabs-header>
+    <app-investiment-types></app-investiment-types>
 
-                <mk-tab *ngFor="let investiment of investiment">
-                    <mk-tab-header>{{investiment.name}}</mk-tab-header>
-                    <mk-tab-content>
-                        <h4 *ngIf="investiment.title">{{investiment.title}}</h4>
-                        <h5>{{investiment.type}}</h5>
-                        {{investiment.description}}
-                    </mk-tab-content>
-                </mk-tab>
-            </mk-tabs>
-        </div>
-    </div>
-
-    <div class="col-md-2 col-xs-12">
-        <mk-box header="Collapsable Box Success" boxColor="green">
-            The body of the box
-        </mk-box>
-    </div>
+    <app-investiment-portfolio></app-investiment-portfolio>
 </div>
