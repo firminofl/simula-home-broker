@@ -19,7 +19,7 @@ $ npm install angular-admin-lte --save
 
 ## Install demo
 ```bash
-$ git clone git://github.com/mledour/angular-admin-lte
+$ git clone git://github.com/firminofl/simula-home-broker
 $ cd angular-admin-lte
 $ npm install
 ```
