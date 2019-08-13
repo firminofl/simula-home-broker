@@ -1,19 +1,35 @@
-span.a {
+span.element {
     display: inline;
     /* the default for span */
-    padding-inline: 35px;
+    padding-inline: 25px;
 }
 
-span.b {
+span.line {
     display: inline-block;
-    width: 100px;
-    height: 100px;
     padding: 5px;
 }
 
-span.c {
-    display: block;
-    width: 10px;
-    height: 15px;
-    padding: 15px;
+.font-title {
+    font-size: 30px;
+}
+
+.font-description {
+    font-size: 12px;
+}
+
+.font-price {
+    font-size: 25px;
+}
+
+.info-box-content-price {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.date-footer {
+    text-align: right;
+}
+
+.add-price-float {
+    float: center;
 }
