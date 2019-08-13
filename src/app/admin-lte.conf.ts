@@ -31,6 +31,8 @@ export const adminLteConf = {
     {label: 'Formulário', iconClasses: 'fa fa-files-o', children: [
         {label: 'Entrada de texto', route: 'form/input-text'}
     ]},
-    {label: 'Tabs', route: 'tabs', iconClasses: 'fa fa-th'}
+    {label: 'Tabs', route: 'tabs', iconClasses: 'fa fa-th'},
+    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-th'},
+    {label: 'Tesouro', route: 'form/input-text', iconClasses: 'fa apple'}
   ]
 };

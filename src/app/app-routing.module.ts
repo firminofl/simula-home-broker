@@ -107,6 +107,12 @@ const routes: Routes = [
         data: {
           title: 'Tabs',
         }
+      }, {
+        path: 'home-broker',
+        loadChildren: './+home-broker/home-broker.module#HomeBrokerModule',
+        data: {
+          title: 'Home-broker',
+        }
       }
     ]
   }, {

@@ -1,0 +1,19 @@
+span.a {
+    display: inline;
+    /* the default for span */
+    padding-inline: 35px;
+}
+
+span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+span.c {
+    display: block;
+    width: 10px;
+    height: 15px;
+    padding: 15px;
+}
