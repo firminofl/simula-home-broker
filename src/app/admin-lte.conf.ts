@@ -1,3 +1,5 @@
+import {Tesouro, Coe, RendaVariavel, FundosInvestimento} from './texts'
+
 export const adminLteConf = {
   skin: 'blue',
   // isSidebarLeftCollapsed: false,
@@ -10,7 +12,7 @@ export const adminLteConf = {
   // layout: 'normal',
   sidebarLeftMenu: [
     {label: 'Navegação', separator: true},
-    {label: 'Início', route: '/', iconClasses: 'fa fa-road', pullRights: [{text: 'New', classes: 'label pull-right bg-green'}]},
+    {label: Tesouro.NAME, route: '/', iconClasses: 'fa fa-road', pullRights: [{text: 'New', classes: 'label pull-right bg-green'}]},
     {label: 'Layout', iconClasses: 'fa fa-th-list', children: [
         {label: 'Configuração', route: 'layout/configuration'},
         {label: 'Customização', route: 'layout/custom'},
@@ -20,14 +22,14 @@ export const adminLteConf = {
         {label: 'Atual', route: 'layout/content'}
       ]},
     {label: 'Componentes', separator: true},
-    {label: 'Acordição', route: 'accordion', iconClasses: 'fa fa-tasks'},
-    {label: 'Alertas', route: 'alert', iconClasses: 'fa fa-exclamation-triangle'},
+    {label: Coe.NAME, route: 'accordion', iconClasses: 'fa fa-tasks'},
+    {label: RendaVariavel.NAME, route: 'alert', iconClasses: 'fa fa-exclamation-triangle'},
     {label: 'Caixas', iconClasses: 'fa fa-files-o', children: [
         {label: 'Caixa padrão', route: 'boxs/box'},
         {label: 'Caixa informativa', route: 'boxs/info-box'},
         {label: 'Caixa pequena', route: 'boxs/small-box'}
       ]},
-    {label: 'Dropdown', route: 'dropdown', iconClasses: 'fa fa-arrows-v'},
+    {label: FundosInvestimento.NAME, route: 'dropdown', iconClasses: 'fa fa-arrows-v'},
     {label: 'Formulário', iconClasses: 'fa fa-files-o', children: [
         {label: 'Entrada de texto', route: 'form/input-text'}
     ]},

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Investimentos } from './investiment-type.model'
-import { tesouro, coe, rendaVariavel, fundosInvestimento } from 'src/app/texts';
+import {Tesouro, Coe, RendaVariavel, FundosInvestimento} from 'src/app/texts';
 
 @Component({
   selector: 'app-investiment-types',
@@ -10,10 +10,10 @@ import { tesouro, coe, rendaVariavel, fundosInvestimento } from 'src/app/texts';
 export class InvestimentTypesComponent implements OnInit {
 
   @Input() investiment: Investimentos[] = [
-    {id: tesouro.ID, name: tesouro.NAME, description: tesouro.DESCRIPTION, title: tesouro.TYPE},
-    {id: coe.ID, name: coe.NAME, description: coe.DESCRIPTION, title: coe.TYPE, type: coe.TITLE},
-    {id: rendaVariavel.ID, name: rendaVariavel.NAME, description: rendaVariavel.DESCRIPTION, title: rendaVariavel.TYPE},
-    {id: fundosInvestimento.ID, name: fundosInvestimento.NAME, description: fundosInvestimento.DESCRIPTION, title: fundosInvestimento.TYPE}
+    {id: Tesouro.ID, name: Tesouro.NAME, description: Tesouro.DESCRIPTION, title: Tesouro.TYPE},
+    {id: Coe.ID, name: Coe.NAME, description: Coe.DESCRIPTION, title: Coe.TYPE, type: Coe.TITLE},
+    {id: RendaVariavel.ID, name: RendaVariavel.NAME, description: RendaVariavel.DESCRIPTION, title: RendaVariavel.TYPE},
+    {id: FundosInvestimento.ID, name: FundosInvestimento.NAME, description: FundosInvestimento.DESCRIPTION, title: FundosInvestimento.TYPE}
   ]
 
   constructor() { }
