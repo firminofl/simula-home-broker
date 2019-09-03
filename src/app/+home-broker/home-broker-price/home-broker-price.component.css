@@ -1,35 +1,65 @@
-span.element {
-    display: inline;
-    /* the default for span */
-    padding-inline: 25px;
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
 }
 
-span.line {
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 0 solid rgba(0, 0, 0, 0.125);
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card-body>.table {
+    margin-bottom: 0;
+}
+
+.card-body>.table>thead>tr>th,
+.card-body>.table>thead>tr>td {
+    border-top-width: 0;
+}
+
+.card-body .fc {
+    margin-top: 5px;
+}
+
+.card-body .full-width-chart {
+    margin: -19px;
+}
+
+.card-body.p-0 .full-width-chart {
+    margin: -9px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.icones {
     display: inline-block;
-    padding: 5px;
-}
-
-.font-title {
-    font-size: 30px;
-}
-
-.font-description {
-    font-size: 12px;
-}
-
-.font-price {
-    font-size: 25px;
-}
-
-.info-box-content-price {
-    padding: 5px 10px;
-    margin-left: 10px;
-}
-
-.date-footer {
-    text-align: right;
-}
-
-.add-price-float {
-    float: center;
+    width: 50%;
+    height: 50%;
 }

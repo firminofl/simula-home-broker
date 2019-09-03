@@ -1,71 +1,130 @@
-<div class="col-sm-3">
-    <span class="info-box-icon"><i class="far fa-plus-square"></i></span>
-</div>
+<script src="https://use.fontawesome.com/62e43a72a9.js"></script>
 
-<div class="col-sm-3 col-sm-12">
-    <!-- Apply any bg-* class to to the info-box to color it -->
-    <div class="info-box bg-blue">
-        <div class="info-box-content-price">
-            <span class="info-box-text font-title">PETR4</span>
-            <p class="font-description">Pétrobras BR</p>
-            <span class="info-box-number font-price"> <br> R$ 25,87</span>
-            <br>
-
-            <div>
-                <span class="line">
-                    <span class="element">Mínimo</span>
-                <br>
-                <span class="element">25,90</span>
-                </span>
-
-                <span class="line">
-                    <span class="element">Máximo</span>
-                <br>
-                <span class="element">26,00</span>
-                </span>
-            </div>
-
-            <span class="progress-description date-footer">
-                Lote 1
-                <br>
-                13/08/2019 06:30
-            </span>
+<div class="col-sm-12 col-sm-12">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Carteira</h3>
         </div>
-        <!-- /.info-box-content -->
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="width: 10px">#</th>
+                        <th>Papel</th>
+                        <th>Últ. Neg.</th>
+                        <th>Preço Mín.</th>
+                        <th>Preço Méd.</th>
+                        <th>Preço Máx.</th>
+                        <th>Volume</th>
+                        <th style="width: 100px; align-content:center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>PETR4</td>
+                        <td>25,78</td>
+                        <td>25,18</td>
+                        <td>25,48</td>
+                        <td>25,88</td>
+                        <td>15332</td>
+                        <td>
+                            <span class="icones">
+                                <a class="btn btn-outline-primary" title="Comprar">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                            <span class="icones">
+                                <a class="btn btn-outline-primary" title="Vender">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>FLRY3</td>
+                        <td>25,78</td>
+                        <td>25,18</td>
+                        <td>25,48</td>
+                        <td>25,88</td>
+                        <td>15332</td>
+                        <td>
+                            <span class="icones">
+                                <a class="btn btn-outline-primary" title="Comprar">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                            <span class="icones">
+                                <a class="btn btn-outline-primary" title="Vender">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                </a>
+                            </span>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.card-body -->
     </div>
-    <!-- /.info-box -->
+    <!-- /.card -->
 </div>
 
-<div class="col-sm-3 col-sm-12">
-    <!-- Apply any bg-* class to to the info-box to color it -->
-    <div class="info-box bg-blue">
-        <div class="info-box-content-price">
-            <span class="info-box-text font-title">PETR4</span>
-            <p class="font-description">Pétrobras BR</p>
-            <span class="info-box-number font-price"> <br> R$ 25,87</span>
-            <br>
+<!--
+<div class="row">
+    <div class="col-sm-3 col-sm-12">
+        <div class="card card-widget widget-user bg-blue">
+            <div class="info-box-content-price-icon-add add-price-float">
+                <span class="info-box-icon bg-blue" (click)="addPrice()"><i class="fa fa-plus"></i></span>
 
-            <div>
-                <span class="line">
-                        <span class="element">Mínimo</span>
-                <br>
-                <span class="element">25,90</span>
-                </span>
+            </div>
+        </div>
+    </div>
 
-                <span class="line">
-                        <span class="element">Máximo</span>
-                <br>
-                <span class="element">26,00</span>
-                </span>
+
+    <div class="col-sm-3 col-sm-12">
+        <div class="card card-widget widget-user bg-blue">
+
+            <div class="widget-user-header bg-info-active">
+                <h2 class="widget-user-username">PETR4</h2>
+                <h5 class="widget-user-desc">Petrobrás distribuidora</h5>
+
+                <h2 class="widget-user-desc">R$ 24,89</h2>
             </div>
 
-            <span class="progress-description date-footer">
-                    Lote 1
-                    <br>
+            <br>
+            <br>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-sm-4 border-right">
+                        <div class="description-block">
+                            <h4 class="description-header">Mínima</h4>
+                            <span class="description-text">R$ 24,00</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 border-right">
+                        <div class="description-block">
+                            <h4 class="description-header">Média</h4>
+                            <span class="description-text">R$ 24,50</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="description-block">
+                            <h4 class="description-header">Máxima</h4>
+                            <span class="description-text">R$ 25,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="progress-description date-footer">
                     13/08/2019 06:30
+                    <br>
                 </span>
+
+            </div>
         </div>
-        <!-- /.info-box-content -->
     </div>
-    <!-- /.info-box -->
 </div>
+-->
