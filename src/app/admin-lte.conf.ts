@@ -12,29 +12,8 @@ export const adminLteConf = {
   // layout: 'normal',
   sidebarLeftMenu: [
     {label: 'Navegação', separator: true},
-    {label: Tesouro.NAME, route: '/', iconClasses: 'fa fa-road', pullRights: [{text: 'New', classes: 'label pull-right bg-green'}]},
-    {label: 'Layout', iconClasses: 'fa fa-th-list', children: [
-        {label: 'Configuração', route: 'layout/configuration'},
-        {label: 'Customização', route: 'layout/custom'},
-        {label: 'Cabeçalho', route: 'layout/header'},
-        {label: 'Sidebar Esquerdo', route: 'layout/sidebar-left'},
-        {label: 'Sidebar Direito', route: 'layout/sidebar-right'},
-        {label: 'Atual', route: 'layout/content'}
-      ]},
-    {label: 'Componentes', separator: true},
-    {label: Coe.NAME, route: 'accordion', iconClasses: 'fa fa-tasks'},
-    {label: RendaVariavel.NAME, route: 'alert', iconClasses: 'fa fa-exclamation-triangle'},
-    {label: 'Caixas', iconClasses: 'fa fa-files-o', children: [
-        {label: 'Caixa padrão', route: 'boxs/box'},
-        {label: 'Caixa informativa', route: 'boxs/info-box'},
-        {label: 'Caixa pequena', route: 'boxs/small-box'}
-      ]},
-    {label: FundosInvestimento.NAME, route: 'dropdown', iconClasses: 'fa fa-arrows-v'},
-    {label: 'Formulário', iconClasses: 'fa fa-files-o', children: [
-        {label: 'Entrada de texto', route: 'form/input-text'}
-    ]},
-    {label: 'Tabs', route: 'tabs', iconClasses: 'fa fa-th'},
-    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-th'},
-    {label: 'Tesouro', route: 'form/input-text', iconClasses: 'fa apple'}
+    {label: 'Início', route: '/', iconClasses: 'fa fa-dashboard'},
+    {label: 'Tesouro Direto', route: 'tesouro-direto', iconClasses: 'fa fa-th'},
+    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-th'}
   ]
 };
