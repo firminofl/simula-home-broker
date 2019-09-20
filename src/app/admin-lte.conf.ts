@@ -13,7 +13,9 @@ export const adminLteConf = {
   sidebarLeftMenu: [
     {label: 'Navegação', separator: true},
     {label: 'Início', route: '/', iconClasses: 'fa fa-dashboard'},
-    {label: 'Tesouro Direto', route: 'tesouro-direto', iconClasses: 'fa fa-th'},
-    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-th'}
+    {label: 'Renda Fixa', iconClasses: 'fa fa-th-list', children: [
+      {label: 'Tesouro Direto', route: 'tesouro-direto'},
+    ]},
+    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-tasks'}
   ]
 };
