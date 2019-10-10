@@ -31,6 +31,14 @@ const routes: Routes = [
     data: {
       title: 'Tesouro Direto'
     }
+  },
+
+  {
+    path: 'carteira',
+    loadChildren: './carteira/carteira.module#CarteiraModule',
+    data: {
+      title: 'Carteira'
+    }
   }
 ];
 

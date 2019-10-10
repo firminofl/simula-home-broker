@@ -16,6 +16,7 @@ export const adminLteConf = {
     {label: 'Renda Fixa', iconClasses: 'fa fa-th-list', children: [
       {label: 'Tesouro Direto', route: 'tesouro-direto'},
     ]},
-    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-tasks'}
+    {label: 'Home Broker', route: 'home-broker', iconClasses: 'fa fa-tasks'},
+    {label: 'Carteira', route: 'carteira', iconClasses: 'fa fa-tasks'}
   ]
 };
