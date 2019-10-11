@@ -1,3 +1,58 @@
-<p>
-  carteira works!
-</p>
+<!-- Theme style -->
+<link rel="stylesheet" href="../../../assets/css/adminlte.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+<div style="text-align:center" class="row">
+    <h1>
+        Carteira de investimentos do Sr(a) {{ title }}!
+    </h1>
+
+    <!-- Sua carteira -->
+    <section class="content col-sm-12">
+        <div class="card card-primary">
+            <div class="card-header text-left">
+                <h2>Sua carteira</h2>
+            </div>
+
+            <div class="card-body">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renda Fixa -->
+    <section class="content col-sm-6">
+        <div class="card card-primary">
+            <div class="card-header text-left">
+                <h2>Parte em renda fixa</h2>
+            </div>
+
+            <div class="card-body">
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renda Variável -->
+    <section class="content col-sm-6">
+        <div class="card card-primary">
+            <div class="card-header text-left">
+                <h2>Parte em renda variável</h2>
+            </div>
+
+            <div class="card-body">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <canvas id="lineChart"></canvas>
+    <canvas id="barChart"></canvas>
+    <canvas id="pieChart"></canvas>
+    -->
+</div>
+
+
+<router-outlet></router-outlet>
