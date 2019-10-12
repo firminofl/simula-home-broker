@@ -17,23 +17,42 @@ export class CarteiraComponent implements OnInit {
   PieChart = [];
 
   ngOnInit() {
-    // Line chart:
-    this.LineChart = new Chart('lineChart', {
-      type: 'line',
+    // Total de ativos
+    this.PieChart = new Chart('totalAtivos', {
+      type: 'pie',
       data: {
-        labels: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: ["PETR4", "FLRY3", "ITSA4", "GRDN3", "OIBR3", "XPLG11", "SELIC", "Préfixado", "IPCA"],
         datasets: [{
-          label: 'Number of Items Sold in Months',
-          data: [9, 7, 3, 5, 2, 10, 15, 16, 19, 3, 1, 9],
-          fill: false,
-          lineTension: 0.2,
-          borderColor: "red",
-          borderWidth: 1
+          label: '# of Votes',
+          data: [5.8, 10.9, 45.9, 12.6, 2.7, 10.0, 2, 4, 7 ],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 151, 62, 0.2)',
+            'rgba(251, 154, 61, 0.2)',
+            'rgba(225, 156, 60, 0.2)',
+            'rgba(215, 155, 69, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(251, 178, 62, 1)',
+            'rgba(225, 152, 64, 1)',
+            'rgba(215, 151, 66, 1)'
+          ],
+          borderWidth: 1.1
         }]
       },
       options: {
         title: {
-          text: "Line Chart",
+          text: "Patrimônio",
           display: true
         },
         scales: {
@@ -46,14 +65,14 @@ export class CarteiraComponent implements OnInit {
       }
     });
 
-    // Bar chart:
-    this.BarChart = new Chart('barChart', {
-      type: 'bar',
+    // Renda Fixa
+    this.PieChart = new Chart('ativosRendaFixa', {
+      type: 'pie',
       data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["SELIC", "Fundos", "Préfixado", "IPCA", "CDB", "LCI"],
         datasets: [{
-          label: '# of Votes',
-          data: [9, 7, 3, 5, 2, 10],
+          label: '# de ativos',
+          data: [23, 32, 20, 10, 10, 5],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -75,8 +94,8 @@ export class CarteiraComponent implements OnInit {
       },
       options: {
         title: {
-          text: "Bar Chart",
-          display: true
+          text: "Renda Fixa",
+          display: false
         },
         scales: {
           yAxes: [{
@@ -88,13 +107,13 @@ export class CarteiraComponent implements OnInit {
       }
     });
 
-    // pie chart:
-    this.PieChart = new Chart('pieChart', {
+    // Renda variável
+    this.PieChart = new Chart('ativosRendaVariável', {
       type: 'pie',
       data: {
         labels: ["PETR4", "FLRY3", "ITSA4", "GRDN3", "OIBR3", "XPLG11"],
         datasets: [{
-          label: '# of Votes',
+          label: '# de ativos',
           data: [57, 32, 300, 50, 2, 10],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -117,8 +136,8 @@ export class CarteiraComponent implements OnInit {
       },
       options: {
         title: {
-          text: "Bar Chart",
-          display: true
+          text: "Renda Variável",
+          display: false
         },
         scales: {
           yAxes: [{
