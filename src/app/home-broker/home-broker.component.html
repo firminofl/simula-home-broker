@@ -1,8 +1,9 @@
 <!--Tabela de ações que o usuário deseja acompanhar a cotação-->
 <div class=" info-box mb-12 ">
-    <app-home-broker-price></app-home-broker-price>
+    <app-home-broker-price [actives]="actives" (add)="addMenuItem($event)" (venderAtivo)="venderAtivo($event)" (comprarAtivo)="comprarAtivo($event)">
+    </app-home-broker-price>
 </div>
 
-<div class=" info-box mb-6 ">
-    <app-home-broker-bullet></app-home-broker-bullet>
-</div>
+<!-- <div class=" info-box mb-6 ">
+    <app-home-broker-bullet [active]="active"></app-home-broker-bullet>
+</div> -->

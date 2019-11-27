@@ -14,8 +14,8 @@
             <h2>Ações</h2>
 
             <div class="col-lg-12">
-                <button class="btn btn-warning float-right">Ok</button>
-                <input class="btn-outline-success float-right" type="text" placeholder="Adicionar ativo">
+                <button class="btn btn-warning float-right" (click)="emitAddEvent()">Ok</button>
+                <input class="btn-outline-success float-right" type="text" #addActiveInput placeholder="Adicionar ativo">
 
             </div>
         </div>
@@ -34,56 +34,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1.</td>
-                        <td>PETR4</td>
-                        <td>25,78</td>
-                        <td>25,18</td>
-                        <td>25,48</td>
-                        <td>25,88</td>
-                        <td>15332</td>
-                        <td>
-                            <span class="icones">
-                                    <a class="btn btn-outline-primary" title="Comprar">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true">
-                                            Comprar
-                                        </i>
-                                    </a>
-                                </span>
-                            <span class="icones">
-                                    <a class="btn btn-outline-primary" title="Vender">
-                                        <i class="fa fa-shopping-cart" aria-hidden="true">
-                                            Vender
-                                        </i>
-                                    </a>
-                                </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>FLRY3</td>
-                        <td>25,78</td>
-                        <td>25,18</td>
-                        <td>25,48</td>
-                        <td>25,88</td>
-                        <td>15332</td>
+                    <tr *ngFor="let active of actives; let i = index">
+                        <td>{{i + 1}}.</td>
+                        <td>{{active.ativo}}</td>
+                        <td>{{active.ultimo_negocio}}</td>
+                        <td>{{active.preco_minimo}}</td>
+                        <td>{{active.ultimo_negocio}}</td>
+                        <td>{{active.preco_maximo}}</td>
+                        <td>{{active.volume}}</td>
                         <td>
                             <span class="icones">
                                 <a class="btn btn-outline-primary" title="Comprar">
-                                    <i class="fa fa-shopping-cart" aria-hidden="true">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true" (click)="comprarAcao(active)">
                                         Comprar
                                     </i>
                                 </a>
                             </span>
                             <span class="icones">
                                 <a class="btn btn-outline-primary" title="Vender">
-                                    <i class="fa fa-shopping-cart" aria-hidden="true">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true" (click)="venderAcao(active)">
                                         Vender
                                     </i>
                                 </a>
                             </span>
                         </td>
-
                     </tr>
                 </tbody>
             </table>
@@ -99,3 +73,5 @@
     </div>
     <!-- /.card -->
 </section>
+
+<app-home-broker-bullet></app-home-broker-bullet>

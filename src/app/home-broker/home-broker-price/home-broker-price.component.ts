@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-//import swal from 'sweetalert';
-
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef, Input } from '@angular/core';
+import { ActiveHB } from '../home-broker.model';
+import { HomeBrokerService } from '../home-broker.service';
 
 @Component({
   selector: 'app-home-broker-price',
@@ -9,29 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeBrokerPriceComponent implements OnInit {
 
-  constructor() { }
+  @Output() add = new EventEmitter
+  // @Output() comprarAtivo = new EventEmitter
+  // @Output() venderAtivo = new EventEmitter
+
+  @ViewChild('addActiveInput') addActiveInput: ElementRef;
+  @Input() actives: ActiveHB
+
+  constructor(private homeBrokerService: HomeBrokerService) { }
 
   ngOnInit() {
+    console.log(`Filho com os dados: ${JSON.stringify(this.actives)}`)
   }
 
+  emitAddEvent(){
+    console.log(`No filho: ${this.addActiveInput.nativeElement.value}`)
+    this.add.emit(this.addActiveInput.nativeElement.value)
+  }
 
-  addPrice() {
-    //alert("Escolha o código da ação")
-    /*
-    swal({
-      title: "Are you sure?",
-      text: "<input></input>",
-      icon: "warning",
-    })
-    .then((willDelete) => {
-      if (willDelete) {
-        swal("Poof! Your imaginary file has been deleted!", {
-          icon: "success",
-        });
-      } else {
-        swal("Your imaginary file is safe!");
-      }
-    });
-    */
+  comprarAcao(active: ActiveHB){
+    console.log(`Comprar: ${JSON.stringify(active)}`)
+    active.operacao = 'Comprar'
+    this.homeBrokerService.comprarAtivo(active)
+  }
+
+  venderAcao(active: ActiveHB){
+    console.log(`Vender: ${JSON.stringify(active)}`)
+    active.operacao = 'Vender'
+    this.homeBrokerService.comprarAtivo(active)
   }
 }

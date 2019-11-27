@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
 import { InvestimentPortfolioComponent } from './home/investiment-portfolio/investiment-portfolio.component';
 import { InvestimentTypesComponent } from './home/investiment-types/investiment-types.component';
+import { HomeBrokerService } from './home-broker/home-broker.service';
 
 @NgModule({
   imports: [
